@@ -1,47 +1,84 @@
-<script setup>
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
-</script>
-
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
+  <div id="app">
+    <header class="app-header">
+      <h1>Генератор цветовых палитр</h1>
+    </header>
 
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-    </div>
-  </header>
+    <main class="main-content">
+      <ColorPaletteGenerator />
+    </main>
 
-  <main>
-    <TheWelcome />
-  </main>
+    <footer class="app-footer">
+      <p>Vue 3 • Генератор палитр • Контрольная №5</p>
+    </footer>
+  </div>
 </template>
 
-<style scoped>
-header {
-  line-height: 1.5;
+<script>
+import ColorPaletteGenerator from './components/ColorPaletteGenerator.vue'
+
+export default {
+  name: 'App',
+  components: {
+    ColorPaletteGenerator
+  }
+}
+</script>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+  line-height: 1.6;
 }
 
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
+#app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
 
-  .logo {
-    margin: 0 2rem 0 0;
-  }
+/* Шапка */
+.app-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 2rem;
+  text-align: center;
+}
 
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
+.app-header h1 {
+  margin-bottom: 0.5rem;
+  font-size: 2.3rem;
+}
+
+.app-header p {
+  opacity: 0.9;
+  font-size: 1.05rem;
+}
+
+/* Контент */
+.main-content {
+  flex: 1;
+  padding: 2rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Подвал */
+.app-footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: auto;
+  font-size: 0.9rem;
 }
 </style>
