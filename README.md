@@ -1,38 +1,38 @@
-# vue-practice-27
+# Генератор цветовых палитр (Vue 3 + Vite)
 
-This template should help get you started developing with Vue 3 in Vite.
+## Функциональность
 
-## Recommended IDE Setup
+- Генерация палитры из **3 / 5 / 7** цветов
+- Кнопка **«Сгенерировать палитру»**
+- Отображение цветов в форматах:
+  - `HEX`
+  - `RGB`
+- Клик по цветовой карточке:
+  - копирование значения в буфер обмена
+  - всплывающее уведомление об успешном копировании
+- Возможность **«заморозить»** цвет (lock), чтобы он не менялся при следующей генерации
+- Сохранение текущей палитры и настроек в `localStorage`
+- Превью палитры в UI-макете:
+  - кнопки
+  - карточка контента
+  - акцентная линия
+- Переключение фона превью: **светлый / тёмный**
+Генерация палитр на основе **базового цвета**:
+- Случайная (`random`)
+- Аналогичная (`analogous`)
+- Монохромная (`monochrome`)
+- Триада (`triad`)
+- Комплементарная (`complementary`)
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
 
-## Recommended Browser Setup
 
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd) 
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
+## Запуск проекта
 
-## Customize configuration
-
-See [Vite Configuration Reference](https://vite.dev/config/).
-
-## Project Setup
-
-```sh
+# Установка зависимостей
 npm install
-```
 
-### Compile and Hot-Reload for Development
-
-```sh
+# Запуск сервера разработки
 npm run dev
-```
 
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
+По умолчанию приложение будет доступно по адресу:
+http://localhost:5173
